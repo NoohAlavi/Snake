@@ -12,9 +12,16 @@ function setup()
 
 function loop()
 {
-  update();
-  draw();
-  window.requestAnimationFrame(loop);
+  if (!Snake.isDead)
+  {
+    update();
+    draw();
+    window.requestAnimationFrame(loop);
+  } else 
+  {
+    ctx.fillStyle = "#ff0000";
+    ctx.fillRect(0, 0, cvs.width, cvs.height); 
+  }
 }
 
 function draw()
