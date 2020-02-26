@@ -1,41 +1,41 @@
 class Snake
 {
-  static position = {
+  position = {
     x: 0,
     y: 0
   };
   
-  static size = 20;
+  size = 20;
 
-  static speed = 5;
-  static xSpeed = 1;
-  static ySpeed = 0;
+  speed = 5;
+  xSpeed = 1;
+  ySpeed = 0;
 
-  static isDead = false;
+  isDead = false;
   
-  static update()
+  update()
   {
-    if (!Snake.isDead)
+    if (!this.isDead)
     {
-      Snake.position.x += Snake.xSpeed * Snake.speed;
-      Snake.position.y += Snake.ySpeed * Snake.speed;
+      this.position.x += this.xSpeed * this.speed;
+      this.position.y += this.ySpeed * this.speed;
       
-      if (Snake.position.x + Snake.size > cvs.width || Snake.position.x < 0 || Snake.position.y + Snake.size > cvs.height || Snake.position.y < 0)
+      if (this.position.x +this.size > cvs.width || this.position.x < 0 || this.position.y + this.size > cvs.height || this.position.y < 0)
       {
-        Snake.isDead = true;        
+        this.isDead = true;        
       }
     }
   }
   
-  static draw()
+  draw()
   {
     ctx.fillStyle = "#00ff00";
-    ctx.fillRect(Snake.position.x, Snake.position.y, Snake.size, Snake.size);
+    ctx.fillRect(this.position.x, this.position.y, this.size, this.size);
   }
 
   static setDir(x, y)
   {
-    Snake.xSpeed = x;
-    Snake.ySpeed = y;
+    this.xSpeed = x;
+    this.ySpeed = y;
   }
 }
