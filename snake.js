@@ -15,7 +15,7 @@ class Snake
   
   static update()
   {
-    if (!isDead)
+    if (!Snake.isDead)
     {
       Snake.position.x += Snake.xSpeed * Snake.speed;
       Snake.position.y += Snake.ySpeed * Snake.speed;
