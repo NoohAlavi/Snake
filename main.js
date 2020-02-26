@@ -17,7 +17,7 @@ function loop()
 
 function draw()
 {
-
+  Snake.draw();
 }
 
 function update()
@@ -25,7 +25,7 @@ function update()
 
 }
 
-function input()
+function input(e)
 {
 
 }
