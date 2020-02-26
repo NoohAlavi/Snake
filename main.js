@@ -19,6 +19,7 @@ function loop()
 
 function draw()
 {
+  ctx.clearRect(0, 0, cvs.width, cvs.height);
   Snake.draw();
 }
 
