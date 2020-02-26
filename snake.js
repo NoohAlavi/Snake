@@ -33,7 +33,7 @@ class Snake
     ctx.fillRect(this.position.x, this.position.y, this.size, this.size);
   }
 
-  static setDir(x, y)
+  setDir(x, y)
   {
     this.xSpeed = x;
     this.ySpeed = y;
