@@ -10,11 +10,21 @@ class Snake
   static speed = 5;
   static xSpeed = 1;
   static ySpeed = 0;
+
+  static isDead = false;
   
   static update()
   {
-    Snake.position.x += Snake.xSpeed * Snake.speed;
-    Snake.position.y += Snake.ySpeed * Snake.speed;
+    if (!isDead)
+    {
+      Snake.position.x += Snake.xSpeed * Snake.speed;
+      Snake.position.y += Snake.ySpeed * Snake.speed;
+      
+      if (Snake.position.x + Snake.width > cvs.width || Snake.position.x < 0 || Snake.position.y + Snake.height > cvs.height || Snake.position.y < 0)
+      {
+        Snake.isDead = true;        
+      }
+    }
   }
   
   static draw()
