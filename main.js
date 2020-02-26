@@ -1,18 +1,19 @@
 window.onload = setup;
 window.onkeydown = input;
 
-var cvs, ctx;
+var cvs, ctx, snake;
 
 function setup()
 { 
   cvs = document.getElementById("cvs");
   ctx = cvs.getContext("2d");
+  snake = new Snake();
   loop();
 }
 
 function loop()
 {
-  if (!Snake.isDead)
+  if (!snake.isDead)
   {
     update();
     draw();
@@ -27,27 +28,27 @@ function loop()
 function draw()
 {
   ctx.clearRect(0, 0, cvs.width, cvs.height);
-  Snake.draw();
+  snake.draw();
 }
 
 function update()
 {
-  Snake.update();
+  snake.update();
 }
 
 function input(e)
 {
   if (e.key == "ArrowRight" || e.key == "d")
   {
-    Snake.setDir(1, 0); 
+    snake.setDir(1, 0); 
   } else if (e.key == "ArrowLeft" || e.key == "a")
   {
-    Snake.setDir(-1 ,0); 
+    snake.setDir(-1 ,0); 
   }  else if (e.key == "ArrowUp" || e.key == "w") 
   {
-    Snake.setDir(0, -1); 
+    snake.setDir(0, -1); 
   } else if (e.key == "ArrowDown" || e.key == "s")
   {
-    Snake.setDir(0, 1); 
+    snake.setDir(0, 1); 
   }
 }
