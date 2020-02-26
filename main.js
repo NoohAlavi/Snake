@@ -24,7 +24,7 @@ function draw()
 
 function update()
 {
-
+  Snake.update();
 }
 
 function input(e)
