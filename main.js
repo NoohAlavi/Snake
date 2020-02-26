@@ -1,6 +1,7 @@
 window.onload = setup;
 window.onkeydown = input;
 
+var cvs = document.getElementById("cvs");
 var ctx = cvs.getContext("2d");
 
 function setup()
