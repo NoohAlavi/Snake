@@ -20,7 +20,7 @@ class Snake
       Snake.position.x += Snake.xSpeed * Snake.speed;
       Snake.position.y += Snake.ySpeed * Snake.speed;
       
-      if (Snake.position.x + Snake.width > cvs.width || Snake.position.x < 0 || Snake.position.y + Snake.height > cvs.height || Snake.position.y < 0)
+      if (Snake.position.x + Snake.size > cvs.width || Snake.position.x < 0 || Snake.position.y + Snake.size > cvs.height || Snake.position.y < 0)
       {
         Snake.isDead = true;        
       }
