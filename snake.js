@@ -14,6 +14,7 @@ class Snake
   
   static draw()
   {
+    ctx.fillStyle = "#00ff00";
     ctx.fillRect(Snake.position.x, Snake.position.y, Snake.width, Snake.height);
   }
 }
