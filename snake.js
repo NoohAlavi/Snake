@@ -4,14 +4,17 @@ class Snake
     x: 0,
     y: 0
   };
+  
   static size = 20;
+
+  static speed = Snake.size / 2;
   static xSpeed = 1;
   static ySpeed = 0;
   
   static update()
   {
-    Snake.position.x += Snake.xSpeed * Snake.size;
-    Snake.position.y += Snake.ySpeed * Snake.size;
+    Snake.position.x += Snake.xSpeed * Snake.speed;
+    Snake.position.y += Snake.ySpeed * Snake.speed;
   }
   
   static draw()
