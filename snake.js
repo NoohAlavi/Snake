@@ -7,7 +7,7 @@ class Snake
   
   static size = 20;
 
-  static speed = Snake.size / 2;
+  static speed = 5;
   static xSpeed = 1;
   static ySpeed = 0;
   
