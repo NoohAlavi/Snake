@@ -22,4 +22,10 @@ class Snake
     ctx.fillStyle = "#00ff00";
     ctx.fillRect(Snake.position.x, Snake.position.y, Snake.size, Snake.size);
   }
+
+  static setDir(x, y)
+  {
+    Snake.xSpeed = x;
+    Snake.ySpeed = y;
+  }
 }
