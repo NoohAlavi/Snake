@@ -1,0 +1,18 @@
+#cvs
+{
+  background-color: #000000;
+  position: absolute;
+  left: 300px;
+  border: 1px solid #ffffff;
+}
+
+#back
+{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body
+{
+  background-color: #000000;
+}
